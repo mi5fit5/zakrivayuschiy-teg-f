@@ -378,7 +378,7 @@
 }
 
 /* Проверка поддержки свойства обводки текста */
-@supports ((text-stroke: 1px var(--main-bg-color)) or (-webkit-text-stroke: 1px var(--main-bg-color);)) {
+@supports ((-webkit-text-stroke: 1px var(--main-bg-color)) or (text-stroke: 1px var(--main-bg-color))) {
   .card__img-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--main-bg-color);
