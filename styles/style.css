@@ -160,7 +160,7 @@
   line-height: 14px;
   text-shadow: 0 0 1px var(--main-bg-color, #fff);
   mix-blend-mode: hard-light;
-  inset-inline-end: 13px;
+  inset-inline-end: 25px;
   inset-block-start: 25px;
 }
 
@@ -367,6 +367,11 @@
 
 /* Для ширины экрана <= 375px */
 @media (width <= 375px) {
+  .card__img-label {
+    inset-inline-end: 11px;
+    inset-block-start: 22px;
+  }
+
   .button-save {
     flex-direction: column;
   }
