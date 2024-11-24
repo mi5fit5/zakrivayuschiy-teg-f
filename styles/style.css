@@ -33,13 +33,13 @@
 .header {
   display: grid;
   justify-items: center;
+  margin-block-end: 100px;
   border: 2px solid var(--text-color, #000);
   font-family: var(--accent-font-family, "PressStart2P", fantasy);
   line-height: normal;
   text-transform: uppercase;
   background-color: var(--main-bg-color, #fff);
   max-inline-size: 696px;
-  margin-block-end: 100px;
 }
 
 .header__title {
@@ -131,10 +131,10 @@
 }
 
 .card {
+  margin-inline: auto;
   border: 2px solid var(--text-color, #000);
   background-color: var(--main-bg-color, #fff);
-  margin-inline: auto;
-  max-inline-size: 696px;;
+  max-inline-size: 696px;
 }
 
 .card__title {
@@ -169,7 +169,7 @@
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
-  aspect-ratio: 1 / 1 ;
+  aspect-ratio: 1 / 1;
 }
 
 .card__content {
@@ -269,7 +269,8 @@
   transform: scaleX(1);
 }
 
-.button__text, .button__icon {
+.button__text,
+.button__icon {
   color: var(--button-text-color);
   mix-blend-mode: difference;
 }
@@ -366,7 +367,6 @@
 
 /* Для ширины экрана <= 375px */
 @media (width <= 375px) {
-
   .button-save {
     flex-direction: column;
   }
@@ -383,7 +383,10 @@
 }
 
 /* Проверка поддержки свойства обводки текста */
-@supports ((-webkit-text-stroke: 1px var(--main-bg-color, #fff)) or (text-stroke: 1px var(--main-bg-color, #fff))) {
+@supports (
+  (-webkit-text-stroke: 1px var(--main-bg-color, #fff)) or
+    (text-stroke: 1px var(--main-bg-color, #fff))
+) {
   .card__img-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--main-bg-color, #fff);
